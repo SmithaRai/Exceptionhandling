@@ -1,5 +1,7 @@
 package exceptionhandling;
 
+import java.util.Scanner;
+
 public class MoodAnalyzer {
 	
 	String message;
@@ -16,19 +18,33 @@ public class MoodAnalyzer {
 		}
 	String analysemood()
 	{
-		if (message == "Iam in Any Mood")
+		String s1 = "Iam in Any Mood";
+		String s2 = "Iam in Sad Mood";
+		
+		if ( message.contains(s1))
+			
 			return "HAPPY";
-		else
+	     
+		else if (message.contains(s2))
+		
 			return "SAD";
+		else
+			
+			return null;
+		
+			
 	}
 
 	public static void main(String[] args) {
-		
+		String msg;
+		Scanner scan = new Scanner(System.in);
 		System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*CUSTOM EXCEPTION HANDLING-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* ");
 		System.out.println(" ");
+		System.out.println("ENTER 'Iam in Sad Mood' or 'Iam in Any Mood' TO VIEW RESPONSE :");
+		msg = scan.nextLine();
+		MoodAnalyzer mood = new MoodAnalyzer(msg);
+
 		
-		MoodAnalyzer mood = new MoodAnalyzer("Iam in Sad Mood");
 		System.out.println("MOOD : "+ mood.analysemood());
-		 
 	}
 }
