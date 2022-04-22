@@ -20,8 +20,8 @@ public class MoodAnalyzer {
 	{
 		String s1 = "Iam in Any Mood";
 		String s2 = "Iam in Sad Mood";
-		
-	    try {	
+			
+		try {
 		     if ( message.contains(s1))
 			
 			      return "HAPPY";
@@ -30,8 +30,8 @@ public class MoodAnalyzer {
 		    
 			      return "SAD";
 		     
-		      else
-		        {     }
+		      else if(message == "NULL MOOD")
+		      {      }
              throw new MoodAnalysisException(message);
 	        }
 	    catch(MoodAnalysisException e) {
@@ -39,7 +39,8 @@ public class MoodAnalyzer {
 	    	  System.out.println(e);
 		      return "invalid input";
 	          }
-	        }
+	}
+	        
 
 	public static void main(String[] args) {
 		String msg;
@@ -48,7 +49,6 @@ public class MoodAnalyzer {
 		System.out.println(" ");
 		System.out.println("ENTER 'Iam in Sad Mood' or 'Iam in Any Mood' TO VIEW RESPONSE :");
 		msg = scan.nextLine();
-	
 		MoodAnalyzer mood = new MoodAnalyzer(msg);
 		
 		System.out.println("MOOD : "+ mood.analysemood());
