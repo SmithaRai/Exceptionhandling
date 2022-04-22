@@ -30,14 +30,14 @@ public class MoodAnalyzer {
 		    
 			      return "SAD";
 		     
-		      else if(message == "NULL MOOD")
+		      else if(message == "Empty Mood")
 		      {      }
              throw new MoodAnalysisException(message);
 	        }
 	    catch(MoodAnalysisException e) {
 	    	
 	    	  System.out.println(e);
-		      return "invalid input";
+		      return "Empty Mood";
 	          }
 	}
 	        
