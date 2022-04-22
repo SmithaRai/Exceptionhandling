@@ -2,17 +2,33 @@ package exceptionhandling;
 
 public class MoodAnalyzer {
 	
-	void analysemood(String message)
+	String message;
+
+		MoodAnalyzer()
+		{
+			
+		}
+		
+		MoodAnalyzer(String message){
+			
+			this.message = message ;
+			
+		}
+	String analysemood()
 	{
-		if(message == "Iam in Any Mood")
-			System.out.println("HAPPY");
+		if (message == "Iam in Any Mood")
+			return "HAPPY";
+		else
+			return "SAD";
 	}
 
 	public static void main(String[] args) {
 		
 		System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*CUSTOM EXCEPTION HANDLING-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* ");
 		System.out.println(" ");
-		MoodAnalyzer mood = new MoodAnalyzer();
-		 mood.analysemood("Iam in Any Mood");
+		
+		MoodAnalyzer mood = new MoodAnalyzer("Iam in Sad Mood");
+		System.out.println("MOOD : "+ mood.analysemood());
+		 
 	}
 }
