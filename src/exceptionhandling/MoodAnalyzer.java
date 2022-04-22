@@ -32,11 +32,12 @@ public class MoodAnalyzer {
 		     
 		      else
 		        {     }
-             throw new NullPointerException("invalid input");
+             throw new MoodAnalysisException(message);
 	        }
-	    catch(Exception e)
-	                      {
-		       return "HAPPY";
+	    catch(MoodAnalysisException e) {
+	    	
+	    	  System.out.println(e);
+		      return "invalid input";
 	          }
 	        }
 
