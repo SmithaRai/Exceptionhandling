@@ -4,8 +4,8 @@ public class MoodAnalyzer {
 	
 	void analysemood(String message)
 	{
-		if(message == "Iam in Sad Mood")
-			System.out.println("SAD");
+		if(message == "Iam in Any Mood")
+			System.out.println("HAPPY");
 	}
 
 	public static void main(String[] args) {
@@ -13,6 +13,6 @@ public class MoodAnalyzer {
 		System.out.println("-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*CUSTOM EXCEPTION HANDLING-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-* ");
 		System.out.println(" ");
 		MoodAnalyzer mood = new MoodAnalyzer();
-		 mood.analysemood("Iam in Sad Mood");
+		 mood.analysemood("Iam in Any Mood");
 	}
 }
