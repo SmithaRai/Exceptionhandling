@@ -21,19 +21,24 @@ public class MoodAnalyzer {
 		String s1 = "Iam in Any Mood";
 		String s2 = "Iam in Sad Mood";
 		
-		if ( message.contains(s1))
+	    try {	
+		     if ( message.contains(s1))
 			
-			return "HAPPY";
+			      return "HAPPY";
 	     
-		else if (message.contains(s2))
-		
-			return "SAD";
-		else
-			
-			return null;
-		
-			
-	}
+		      else if( message.contains(s2))
+		    
+			      return "SAD";
+		     
+		      else
+		        {     }
+             throw new NullPointerException("invalid input");
+	        }
+	    catch(Exception e)
+	                      {
+		       return "HAPPY";
+	          }
+	        }
 
 	public static void main(String[] args) {
 		String msg;
@@ -42,8 +47,8 @@ public class MoodAnalyzer {
 		System.out.println(" ");
 		System.out.println("ENTER 'Iam in Sad Mood' or 'Iam in Any Mood' TO VIEW RESPONSE :");
 		msg = scan.nextLine();
+	
 		MoodAnalyzer mood = new MoodAnalyzer(msg);
-
 		
 		System.out.println("MOOD : "+ mood.analysemood());
 	}
